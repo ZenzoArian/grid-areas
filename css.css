@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+
+html, body, h3 {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+header{padding: 2em;}
+header,aside {
+  /* background-color: rgba(180, 220, 225, 0.5); */
+  background-image: linear-gradient(to bottom right, #36D1DC, #5B86E5);
+}
+h1, h3 {font-family: 'PT Sans'}
+
+h1, .tagline{
+  color: #fff;
+}
+
+.nogTip{
+font-size: 2em;
+}
+
+section{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+.nummer{
+  background-color: pink;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+
+article{
+  padding: 1em;
+}
+section img {
+  max-width: 100%
+}
+ol{
+  color: #ffff;
+}
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #ffff;
+}
+
+aside h3{
+  background-color: pink;
+  padding: 2em;
+  color: #fff;
+}
+aside a {
+  text-decoration: none;
+  padding: 2em;
+  display: block;
+  color: #ffff;
+}
+aside a:hover{
+  text-decoration: none;
+    background-color: pink;
+    color: #fff;
+    border-radius: 20px 0px 0px 20px;
+}
+
+footer {
+  background-color: #333;
+  color:  #eee;
+  padding: 2em;
+}
+
+@media screen and (min-width:760px){
+  .afb {
+    display: block;
+    background-image: url(image/cupcake2.png);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .afb2 {
+    display: block;
+    background-image: url(image/cupcake3.png);
+    background-size: cover;
+    background-position: center center;
+  }
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop"
+    "t1 t2"
+    "t3 t4"
+    "t3 t5"
+    "afb t6"
+    "afb t7"
+    "t8 aside"
+    "t9 aside"
+    "t10 aside"
+    "voet voet";
+  }
+  header {grid-area: kop;}
+  .ding1 {grid-area:  t1;}
+  .ding2 {grid-area: t2;}
+  .ding3 {grid-area: t3;}
+  .ding4 {grid-area:  t4;}
+  .afb {grid-area:  afb;}
+  .afb2 {grid-area:  afb2;}
+  .ding5 {grid-area: t5;}
+  .ding6 {grid-area: t6;}
+  .ding7 {grid-area:  t7;}
+  .ding8 {grid-area: t8;}
+  .ding9 {grid-area: t9;}
+  .ding10 {grid-area: t10;}
+  aside {grid-area: aside;}
+  footer {grid-area: voet;}
+  h1 {font-size: 2.6em;}
+
+  .ding1dingimg{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+.ding1dingimg h3 {
+  grid-column: span 2;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+}
+
+@media screen and (min-width:1000px) {
+  body{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop"
+    "t1 t2 afb"
+    "t3 t4 afb"
+    "t3 t5 afb"
+    "aside t6 t6"
+    "aside t7 t8"
+    "aside t9 t10"
+    "aside voet voet";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body{
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr;
+    grid-template-areas: "kop kop kop kop kop"
+    "t1 t2 t3 t4 afb2"
+    "t1 t2 t3 t4 afb2"
+    "t5 t6 t7 afb aside"
+    "t8 t9 t10 afb aside"
+    "voet voet voet voet voet";
+  }
+}
+
+
+#validatie img {
+  height: 2.5em;
+  width: auto;
+  border: 0;
+  margin: 0 .3em;
+}
